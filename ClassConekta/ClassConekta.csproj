@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AB4D959A-9806-4CF8-B4F8-D5A81139DD53}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ClassConekta</RootNamespace>
+    <AssemblyName>ClassConekta</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json.Net20">
+      <HintPath>..\packages\Newtonsoft.Json.Net20.dll.3.5.0\lib\2.0\Newtonsoft.Json.Net20.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\ConektaException.cs" />
+    <Compile Include="Base\ConektaList.cs" />
+    <Compile Include="Base\ConektaObject.cs" />
+    <Compile Include="Base\Requestor.cs" />
+    <Compile Include="Base\Resource.cs" />
+    <Compile Include="ClassConekta.cs" />
+    <Compile Include="Conekta.cs" />
+    <Compile Include="Models\Address.cs" />
+    <Compile Include="Models\AddressBoundary.cs" />
+    <Compile Include="Models\Card.cs" />
+    <Compile Include="Models\Charge.cs" />
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\DiscountLine.cs" />
+    <Compile Include="Models\Event.cs" />
+    <Compile Include="Models\FiscalEntity.cs" />
+    <Compile Include="Models\LineItem.cs" />
+    <Compile Include="Models\Log.cs" />
+    <Compile Include="Models\OfflineRecurrentReference.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\PaymentMethod.cs" />
+    <Compile Include="Models\PaymentSource.cs" />
+    <Compile Include="Models\Plan.cs" />
+    <Compile Include="Models\Return.cs" />
+    <Compile Include="Models\ShippingContact.cs" />
+    <Compile Include="Models\ShippingLine.cs" />
+    <Compile Include="Models\Subscription.cs" />
+    <Compile Include="Models\TaxLine.cs" />
+    <Compile Include="Models\Webhook.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
